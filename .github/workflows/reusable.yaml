@@ -1,0 +1,12 @@
+name: Reusable deploy
+on: workflow_call
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get artifacts
+        uses: actions/download-artifact@v3
+      - name: output files
+        run: ls
+      - name: Done
+        run: echo 'All done!'
